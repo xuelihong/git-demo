@@ -20,5 +20,13 @@ git push origin master
 
 删除分支：git branch -d <name>
 
-git log --graph命令可以看到分支合并图
+查看分支合并图
+git log --graph
 git log --graph --pretty=oneline --abbrev-commit
+
+Git暂存管理
+git stash # 暂存
+git stash list # 列所有stash
+git stash apply # 恢复暂存的内容
+git stash drop # 删除暂存区
+git stash pop # 恢复暂存的内容+删除暂存区
