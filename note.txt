@@ -8,20 +8,17 @@ git push -u origin master
 推送最新修改
 git push origin master
 
-创建dev分支
-git checkout -b dev
-git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+查看分支：git branch
 
-$ git branch dev
-$ git checkout dev
+创建分支：git branch <name>
 
-查看当前分支
-git branch
+切换分支：git checkout <name>
 
-合并指定分支到当前分支
-git merge
+创建+切换分支：git checkout -b <name>
 
-删除dev分支
-git branch -d dev
+合并某分支到当前分支：git merge <name>
 
-master分支
+删除分支：git branch -d <name>
+
+git log --graph命令可以看到分支合并图
+git log --graph --pretty=oneline --abbrev-commit
