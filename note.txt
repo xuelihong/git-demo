@@ -22,3 +22,5 @@ git push origin master
 
 git log --graph命令可以看到分支合并图
 git log --graph --pretty=oneline --abbrev-commit
+
+git merge --no-ff -m "merge with no-ff" dev
