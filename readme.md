@@ -23,11 +23,23 @@ $ git init // 初始化仓库
 #####把文件添加到仓库
 ```
 $ git add readme.md
+$ git add file1.txt file2.txt // 可添加多个文件
 ```
 
 #####把文件提交到仓库
 ```
-$ git commit -m "新增readme.md文件"
+$ git commit -m "新增readme.md文件" // -m后面输入的是本次提交的说明
+```
+
+#####查看工作区状态
+```
+$ git status
+```
+
+#####查看文件的不同处
+```
+$ git diff // 查看所有文件不同的地方
+$ git diff readme.md // 查看 readme.md 文件的不同处，按 Q 键退出查看模式
 ```
 
 #####关联一个远程库
@@ -39,8 +51,6 @@ $ git commit -m "新增readme.md文件"
 #####推送最新修改
 `git push origin master`
 
-#####查看工作区状态
-`git status`
 
 #####查看分支
 `git branch`
