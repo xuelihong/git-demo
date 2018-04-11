@@ -61,7 +61,12 @@ $ git status
 $ git diff #查看工作区(work dict)和暂存区(stage)的区别
 $ git diff --cached #查看暂存区(stage)和分支(master)的区别
 $ git diff HEAD #查看工作区和版本库里面最新版本的区别
-$ git diff readme.md #查看 readme.md 文件的不同处，按 Q 键退出查看模式
+$ git diff readme.md #查看 readme.md 文件的不同处，按 Q 键返回命令行
+```
+
+##### 查看文件
+```
+$ cat readme.md
 ```
 
 ##### 查看提交日志
