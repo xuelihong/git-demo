@@ -31,6 +31,10 @@ $ git add file1.txt file2.txt // 可添加多个文件
 $ git commit -m "新增readme.md文件" // -m后面输入的是本次提交的说明
 ```
 
+>把文件往Git版本库里添加的时候，是分两步执行的：
+> * 第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；
+> * 第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。
+
 #####查看工作区状态
 ```
 $ git status
@@ -38,8 +42,10 @@ $ git status
 
 #####查看文件的不同处
 ```
-$ git diff // 查看所有文件不同的地方
-$ git diff readme.md // 查看 readme.md 文件的不同处，按 Q 键退出查看模式
+$ git diff # 查看工作区(work dict)和暂存区(stage)的区别
+$ git diff --cached # 查看暂存区(stage)和分支(master)的区别
+$ git diff HEAD # 查看工作区和版本库里面最新版本的区别
+$ git diff readme.md # 查看 readme.md 文件的不同处，按 Q 键退出查看模式
 ```
 
 #####查看提交日志
