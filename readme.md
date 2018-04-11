@@ -42,6 +42,24 @@ $ git diff // 查看所有文件不同的地方
 $ git diff readme.md // 查看 readme.md 文件的不同处，按 Q 键退出查看模式
 ```
 
+#####查看提交日志
+```
+$ git log
+$ git log --pretty=oneline // 每次记录显示在一行
+```
+
+#####回退版本
+```
+$ git reset --hard HEAD^ // 上一个版本，HEAD指向的版本就是当前版本
+$ git reset --hard HEAD^^ // 上上个版本
+$ git reset --hard ec32933 // 回滚到指定版本
+```
+
+#####查看命令历史
+```
+$ git reflog
+```
+
 #####关联一个远程库
 `git remote add origin git@server-name:path/repo-name.git`
 
