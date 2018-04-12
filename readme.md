@@ -15,21 +15,28 @@ $ git --version
 #### 创建版本库
 ```
 $ mkdir git-demo
+
 $ cd git-demo
-$ pwd #显示当前目录
+
+// 显示当前目录
+$ pwd
 E/github/git-demo
+
 $ git init #初始化仓库
 ```
 
 #### 把文件添加到仓库
 ```
 $ git add readme.md
-$ git add file1.txt file2.txt #可添加多个文件
+
+// 可添加多个文件
+$ git add file1.txt file2.txt
 ```
 
 #### 把文件提交到仓库
 ```
-$ git commit -m "新增readme.md文件" #m后面输入的是本次提交的说明
+// m 后面输入的是本次提交的说明
+$ git commit -m "新增readme.md文件"
 ```
 
 > git commit 不输入 -m 以及后面的内容会进入vim模式 <br/>
@@ -62,11 +69,20 @@ $ git status
 
 #### 查看文件的不同处
 ```
-$ git diff #查看工作区(work dict)和暂存区(stage)的区别
-$ git diff --cached #查看暂存区(stage)和分支(master)的区别
-$ git diff HEAD -- readme.md #查看工作区和版本库里面最新版本的区别
-$ git diff HEAD #查看工作区和版本库里面最新版本的区别
-$ git diff readme.md #查看 readme.md 文件的不同处，按 Q 键返回命令行
+// 查看工作区(work dict)和暂存区(stage)的区别
+$ git diff
+
+// 查看暂存区(stage)和分支(master)的区别
+$ git diff --cached
+
+// 查看工作区和版本库里面最新版本的区别
+$ git diff HEAD -- readme.md
+
+// 查看工作区和版本库里面最新版本的区别
+$ git diff HEAD
+
+// 查看 readme.md 文件的不同处，按 Q 键返回命令行
+$ git diff readme.md
 ```
 
 #### 查看文件
@@ -81,18 +97,29 @@ $ ls -ah
 
 #### 查看提交日志
 ```
+// 显示从最近到最远的提交日志
 $ git log
-$ git log --pretty=oneline #每次记录显示为一行
+
+// 每条记录显示为一行
+$ git log --pretty=oneline
+
+// 查看分支合并情况
 $ git log --graph
+
+// 显示简化的提交记录
 $ git log --graph --pretty=oneline --abbrev-commit
-$ git merge --no-ff -m "merge with no-ff" dev
 ```
 
 #### 回退版本
 ```
-$ git reset --hard HEAD^ #上一个版本，HEAD指向的版本就是当前版本
-$ git reset --hard HEAD^^ #上上个版本
-$ git reset --hard ec32933 #回滚到指定版本
+// 上一个版本，HEAD指向的版本就是当前版本
+$ git reset --hard HEAD^
+
+// 上上个版本 
+$ git reset --hard HEAD^^
+
+// 回滚到指定版本
+$ git reset --hard ec32933
 ```
 
 #### 撤销修改
@@ -104,8 +131,11 @@ $ git checkout -- readme.md #撤销全部修改
 
 #### 删除文件
 ```
-$ rm note.txt #不从版本库删除文件，可使用 git checkout -- note.txt 恢复
-$ git rm note.txt #从版本库删除文件，需使用 git checkout HEAD -- note.txt 或 git checkout HEAD note.txt 恢复
+不从版本库删除文件，可使用 git checkout -- note.txt 恢复
+$ rm note.txt
+
+//从版本库删除文件，需使用 git checkout HEAD -- note.txt 或 git checkout HEAD note.txt 恢复
+$ git rm note.txt 
 ```
 
 
@@ -171,6 +201,9 @@ $ git merge --no-ff -m "merge with no-ff" dev
 #### 删除分支
 ```
 $ git branch -d <name>
+
+// 删除一个没有被合并过的分支
+$git branch -D <name>
 ```
 
 #### Git暂存管理
