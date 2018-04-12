@@ -1,4 +1,5 @@
-## Git命令
+## Git命令学习
+[查看Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 #### 安装git后配置全局参数
 ```
@@ -8,7 +9,7 @@ $ git config --global user.email "email@example.com"
 
 #### 查看版本号
 ```
-git --version
+$ git --version
 ```
 
 #### 创建版本库
@@ -92,10 +93,16 @@ $ git reset --hard ec32933 #回滚到指定版本
 ```
 
 #### 撤销修改
->一种是 readme.md 自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态
->一种是 readme.md 已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+> 一种是 readme.md 自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态
+> 一种是 readme.md 已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
 ```
 $ git checkout -- readme.md #撤销全部修改
+```
+
+#### 删除文件
+```
+$ rm note.txt #不从版本库删除文件，可使用 git checkout -- note.txt 恢复
+$ git rm note.txt #从版本库删除文件，需使用 git checkout HEAD -- note.txt 或 git checkout HEAD note.txt 恢复
 ```
 
 
@@ -103,6 +110,14 @@ $ git checkout -- readme.md #撤销全部修改
 ```
 $ git reflog
 ```
+
+
+#### 创建SSH Key
+```
+$ ssh-keygen -t rsa -C "email@example.com"
+```
+> .ssh目录，里面有 id_rsa 私钥（保密）和 id_rsa.pub 公钥(可公开)两个文件
+
 
 #### 关联一个远程库
 ```
@@ -113,6 +128,7 @@ $ git remote add origin git@server-name:path/repo-name.git
 ```
 $ git push -u origin master
 ```
+> -u 参数，Git 不但会把本地的 master 分支内容推送的远程新的 master 分支，还会把本地的 master 分支和远程的 master 分支关联起来，在以后的推送或者拉取时就可以简化命令
 
 #### 推送最新修改
 ```
