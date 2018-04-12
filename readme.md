@@ -165,7 +165,7 @@ $ git checkout -b <name>
 $ git merge <name>
 
 // 普通模式合并，合并后的历史有分支
-$ git merge --no--ff -m "merge with no-ff" dev
+$ git merge --no-ff -m "merge with no-ff" dev
 ```
 
 #### 删除分支
