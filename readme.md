@@ -257,5 +257,4 @@ $ git push origin --tags
 $ git push origin :refs/tags/<tagname>
 ```
 
-> 忽略某些文件时，需要编写.gitignore
-> .gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理！
+> 忽略某些文件时，需要编写.gitignore，.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理
