@@ -165,10 +165,28 @@ $ git checkout -b <name>
 $ git merge <name>
 
 // 普通模式合并，合并后的历史有分支
-$ git merge --no--ff -m "merge with no-ff" dev
+$ git merge --no-ff -m "merge with no-ff" dev
 ```
 
 #### 删除分支
 ```
 $ git branch -d <name>
+```
+
+#### Git暂存管理
+```
+// 将工作区暂存
+$ git stash
+
+// 查看暂存列表
+$ git stash list
+
+// 恢复暂存的内容
+$ git stash apply
+
+// 删除暂存内容
+$ git stash drop
+
+// 恢复暂存的内容后删除暂存内容，相当于是先执行 git stash apply 再执行 git stash drop
+$ git stash pop
 ```
