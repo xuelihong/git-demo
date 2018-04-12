@@ -223,3 +223,36 @@ $ git stash drop
 // 恢复暂存的内容后删除暂存内容，相当于是先执行 git stash apply 再执行 git stash drop
 $ git stash pop
 ```
+
+#### 标签管理
+```
+// 创建标签
+$ git tag <tagname>
+
+// 在指定的提交记录创建标签
+$ git tag <tagname> 718baf8
+
+// 创建带有说明的标签，用-a指定标签名，-m指定说明文字
+$ git tag -a v0.1 -m "version 0.1 released" 718baf8
+
+// 用私钥签名一个标签
+$ git tag -s v0.2 -m "signed version 0.2 released" 14a5234
+
+// 查看所有标签
+$ git tag
+
+// 查看指定标签
+$ git show <tagname> 
+
+// 删除标签
+$ git tag -d <tagname>
+
+// 推送某个标签到远程
+$ git push origin <tagname>
+
+// 推送全部尚未推送到远程的本地标签
+$ git push origin --tags
+
+// 删除一个远程标签
+$ git push origin :refs/tags/<tagname>
+```
