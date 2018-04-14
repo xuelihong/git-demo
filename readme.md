@@ -8,8 +8,8 @@ $ git --version
 
 #### 获取设置的 git 账号
 ```
-$ git config --global user.name "Your Name"
-$ git config --global user.email "email@example.com"
+$ git config --global user.name
+$ git config --global user.email
 ```
 
 #### 设置全局的 git 账号
@@ -47,6 +47,9 @@ $ git add readme.md
 
 // 可添加多个文件
 $ git add file1.txt file2.txt
+
+// 添加所有
+$ git add -all
 ```
 
 #### 把文件提交到仓库
