@@ -1,28 +1,44 @@
-## Git命令学习
+## Git命令学习（Git Bash命令行操作）
 [查看Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
-
-#### 安装git后配置全局参数
-```
-$ git config --global user.name "Your Name"
-$ git config --global user.email "email@example.com"
-```
 
 #### 查看版本号
 ```
 $ git --version
 ```
 
+#### 获取设置的 git 账号
+```
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+```
+
+#### 设置全局的 git 账号
+```
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+```
+
 #### 创建版本库
 ```
+// 创建文件夹
 $ mkdir git-demo
 
+// 切换到 git-demo 目录
 $ cd git-demo
 
 // 显示当前目录
-$ pwd
-E/github/git-demo
+$ pwd 
+// E/github/git-demo
 
-$ git init #初始化仓库
+// 初始化仓库
+$ git init
+```
+
+#### 创建忽略文件
+```
+$ touch .gitignore
+// .git
+// .idea
 ```
 
 #### 把文件添加到仓库
@@ -90,7 +106,7 @@ $ git diff readme.md
 $ cat readme.md
 ```
 
-#### 查看隐藏的文件
+#### 查看目录
 ```
 $ ls -ah
 ```
@@ -131,7 +147,7 @@ $ git checkout -- readme.md #撤销全部修改
 
 #### 删除文件
 ```
-不从版本库删除文件，可使用 git checkout -- note.txt 恢复
+// 删除本地文件，不从版本库删除文件，可使用 git checkout -- note.txt 恢复
 $ rm note.txt
 
 //从版本库删除文件，需使用 git checkout HEAD -- note.txt 或 git checkout HEAD note.txt 恢复
@@ -256,5 +272,3 @@ $ git push origin --tags
 // 删除一个远程标签
 $ git push origin :refs/tags/<tagname>
 ```
-
-> 忽略某些文件时，需要编写.gitignore，.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理
